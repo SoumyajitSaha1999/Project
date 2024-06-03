@@ -1,0 +1,100 @@
+/* Google fonts */
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@1&display=swap');
+
+body {
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+    background: black;
+}
+
+.center {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapper {
+    height: fit-content;
+    width: fit-content;
+    padding: 20px 30px;
+    box-shadow: 0 0 20px 10px rgba(152, 116, 244, 0.6);
+    border-radius: 10mm;
+    /* padding-bottom: 2px; */
+}
+
+.slider {
+    height: 24px;
+    width: 360px;
+    border: 0.5mm solid rgb(100, 100, 100);
+    border-radius: 100mm;
+    z-index: 1;
+    position: relative;
+}
+
+.thumb {
+    min-width: 24px;
+    width: 24px;
+    height: 24px;
+    border-radius: 5mm;
+    background: linear-gradient(to right, rgb(61, 36, 124), rgb(152, 116, 244));
+    cursor: grab;
+    position: relative;
+}
+
+.thumb::before {
+    position: absolute;
+    content: "";
+    width: 30px;
+    height: 30px;
+    top: 50%;
+    right: 0;
+    transform: translate(0, -50%);
+    background: white;
+    border-radius: 50%;
+}
+
+.option {
+    position: absolute;
+    display: block;
+    top: 50%;
+    left: 10px;
+    transform: translate(0, -50%);
+    width: 8px;
+    height: 8px;
+    background: white;
+    border-radius: 50%;
+}
+
+.option:nth-child(2),.option:nth-child(4) {
+    left: 85px;
+    width: 5px;
+    height: 5px;
+    background: white;
+}
+
+.option:nth-child(3) {
+    left: 170px;
+}
+
+.option:nth-child(4) {
+    left: 255px;
+}
+
+.option:nth-child(5) {
+    left: 340px;
+}
+
+.texts {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+    font-family: 'DM Serif Display', serif;
+    font-size: 12px;
+    margin-top: 3px;
+}
